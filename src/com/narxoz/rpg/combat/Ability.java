@@ -1,15 +1,11 @@
 package com.narxoz.rpg.combat;
 
+import com.narxoz.rpg.enemy.Enemy;
 
-public interface Ability extends Cloneable {
-
+public interface Ability {
     String getName();
-
     int getDamage();
-
-    AbilityType getType();
-
+    int getManaCost();
     String getDescription();
-
-    Ability clone();
+    void execute(Enemy caster, Enemy target);
 }
